@@ -14,6 +14,7 @@
 [image9]: ./images/32.png
 [image10]: ./images/3a.png
 [image11]: ./images/3r.png
+[image12]: ./images/2c.png
 
 1. Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
 the code is shown below:
@@ -153,25 +154,45 @@ the training result and the confusion matrix is shown below,
 
 the testing result is shown below of each result for test1 , 2 and 3
 
+#### test1 
+the svm training results
 ![alt text][image4]
-
 ![alt text][image5]
+
+shown on the PR2 robot
 
 ![alt text][image6]
 
-![alt text][image7]
 
+#### test2
+the svm training results
+
+![alt text][image7]
+![alt text][image12]
+
+shown on the PR2 robot
 ![alt text][image8]
 
-![alt text][image9]
 
+#### test2
+the svm training results
+
+![alt text][image9]
 ![alt text][image10]
 
+
+shown on the PR2 robot
 ![alt text][image11]
 
 Spend some time at the end to discuss your code, what techniques you used, what worked and why, where the implementation might fail and how you might improve it if you were going to pursue this project further.  
 
 ### Future disscuss:
+
+1. for the the filtering part, I experienced some parameter iteration to remove the unnecessary part, but still there are some parts need to be improved.
+
+2. for the training svm part, I have spent some time training different iteration like 10 ,100 , 500, 1000 , it turns out 500 is a relatively reasonable number to get the good result in time to pass the test, but the 1000 is better, which takes way too long, we might need to train in the gpu ssetup
+
+3. I haven't finish the challenging part , but I will keep trying.
 
 
 
