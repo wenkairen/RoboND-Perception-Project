@@ -229,7 +229,6 @@ def pr2_mover(object_list):
 
     # TODO: Initialize variables
     dict_list = []
-    pick_centroids = []
 
     # TODO: Get/Read parameters
     object_list_param = rospy.get_param('/object_list')
