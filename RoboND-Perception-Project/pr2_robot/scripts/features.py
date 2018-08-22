@@ -34,9 +34,9 @@ def compute_color_histograms(cloud, using_hsv=True):
         channel_3_vals.append(color[2])
     
     # TODO: Compute histograms
-    c1_hist, _ = np.histogram(channel_1_vals, bins = 128)
-    c2_hist, _ = np.histogram(channel_2_vals, bins = 128)
-    c3_hist, _ = np.histogram(channel_3_vals, bins = 128)
+    c1_hist, _ = np.histogram(channel_1_vals, bins = 128, range=(0, 256))
+    c2_hist, _ = np.histogram(channel_2_vals, bins = 128, range=(0, 256))
+    c3_hist, _ = np.histogram(channel_3_vals, bins = 128, range=(0, 256))
 
     # TODO: Concatenate and normalize the histograms
     hist_features = np.concatenate((c1_hist, c2_hist, c3_hist)).astype(np.float64)
@@ -59,9 +59,9 @@ def compute_normal_histograms(normal_cloud):
         norm_z_vals.append(norm_component[2])
 
     # TODO: Compute histograms of normal values (just like with color)
-    hist_x, _ = np.histogram(norm_x_vals, bins = 64)
-    hist_y, _ = np.histogram(norm_y_vals, bins = 64)
-    hist_z, _ = np.histogram(norm_z_vals, bins = 64)
+    hist_x, _ = np.histogram(norm_x_vals, bins = 64, range=(0, 256))
+    hist_y, _ = np.histogram(norm_y_vals, bins = 64, range=(0, 256))
+    hist_z, _ = np.histogram(norm_z_vals, bins = 64, range=(0, 256))
     # TODO: Concatenate and normalize the histograms
     hist_features = np.concatenate((hist_x, hist_y, hist_z)).astype(np.float64)
 
